@@ -1,0 +1,246 @@
+﻿@{ ViewBag.Title = "Repositories"; }
+
+<div class="pos-fixed fixed-top app-bar-wrapper z-top">
+    <header class="container pos-relative" data-role="appbar" data-expand-point="md">
+        <a href="#" class="brand no-hover fg-white-hover order-1"><span class="mif-github mif-2x"></span></a>
+        <div class="app-bar-item d-none d-flex-md order-2">
+            <input type="text" placeholder="Search" class="app-bar-input app-bar-search">
+        </div>
+
+        <ul class="app-bar-menu order-4 order-md-3">
+            <li><a href="#" class="fg-white-hover">Pull requests</a></li>
+            <li><a href="#" class="fg-white-hover">Issues</a></li>
+            <li><a href="#" class="fg-white-hover">Marketplace</a></li>
+            <li><a href="#" class="fg-white-hover">Explorer</a></li>
+        </ul>
+
+        <div class="app-bar-container ml-auto order-3 order-md-4">
+            <a href="#" class="app-bar-item"><span class="mif-bell"></span></a>
+
+            <div class="app-bar-container">
+                <a class="app-bar-item dropdown-toggle marker-light" href="#"><span class="mif-plus"></span></a>
+                <ul class="d-menu place-right" data-role="dropdown">
+                    <li><a href="">New repository</a></li>
+                    <li><a href="">Import repository</a></li>
+                    <li><a href="">New gist</a></li>
+                    <li><a href="">New organization</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">New issue</a></li>
+                </ul>
+            </div>
+
+            <div class="app-bar-container">
+                <a class="app-bar-item dropdown-toggle marker-light pl-1 pr-5" href="#">
+                    <img class="rounded" data-role="gravatar" data-email="debojyoti.roychowdhury@gmail.com" data-size="25">
+                </a>
+                <ul class="v-menu place-right" data-role="dropdown">
+                    <li><a href="">Signed as <strong>debs</strong></a></li>
+                    <li class="divider"></li>
+                    <li><a href="">Your profile</a></li>
+                    <li><a href="">Your stars</a></li>
+                    <li><a href="">Your gists</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Settings</a></li>
+                    <li><a href="">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</div>
+
+<div class="pt-16 bg-light" id="hero">
+    <div class="container">
+        <div class="row">
+            <div class="cell-md-4 text-center-fs text-left-md pt-2">
+                <div>
+                    <span class="mif-books"></span>
+                    <a href="#"><span id="github-owner">debs</span> / <span id="github-project">Git-UI-CSS</span></span></a>
+                </div>
+            </div>
+
+            <div class="cell-md-8 text-center-fs text-right-md pt-2">
+                <div class="info-button rounded">
+                    <a href="#" class="button"><span class="mif-eye"></span> Unwatch</a>
+                    <a href="#" class="info" id="github-watch">589</a>
+                </div>
+
+                <div class="info-button rounded">
+                    <a href="#" class="button"><span class="mif-star-full"></span> Star</a>
+                    <a href="#" class="info" id="github-star">5,546</a>
+                </div>
+
+                <div class="info-button rounded mt-1 mt-0-md">
+                    <a href="#" class="button"><span class="mif-flow-tree"></span> Fork</a>
+                    <a href="#" class="info" id="github-fork">1,841</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-4 pl-0 pr-0 pl-3-md pr-3-md">
+        <div class="container">
+            <ul data-role="tabs" class="bg-light w-100 pl-0 pr-0" data-expand-point="md">
+                <li><a href="#"><span class="mif-embed"></span> Code</a></li>
+                <li><a href="#"><span class="mif-info"></span> Issues</a></li>
+                <li><a href="#"><span class="mif-flow-branch"></span> Pull requests</a></li>
+                <li><a href="#"><span class="mif-library"></span> Projects</a></li>
+                <li><a href="#"><span class="mif-wikipedia"></span> Wiki</a></li>
+                <li><a href="#"><span class="mif-chart-bars"></span> Insights</a></li>
+                <li><a href="#"><span class="mif-cog"></span> Settings</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4">
+    <div class="container">
+        <div class="place-right">
+            <butoon class="button">Edit</butoon>
+        </div>
+        <div>
+            Build responsive, mobile-first projects on the web with the first front-end component library in Metro Style.
+        </div>
+        <div class="mt-2">
+            <code>css</code>
+            <code>javascript</code>
+            <code>less</code>
+            <code>html</code>
+            <code>html5</code>
+            <code>metro-ui</code>
+            <code>metro-ui-css</code>
+            <a href="#" class="text-small">Manage topics</a>
+        </div>
+
+        <hr class="mt-4">
+
+        <div class="mt-4">
+            <div class="row">
+                <div class="cell-md-6 text-center text-left-md pt-2">
+                    <button class="button small rounded hovered">New pull request</button>
+                </div>
+
+                <div class="cell-md-6 text-center-fs text-right-md pt-2">
+                    <button class="button small rounded hovered">Create new file</button>
+                    <button class="button small rounded hovered">Uploads files</button>
+                    <button class="button small rounded hovered">Find file</button>
+                    <button class="button small rounded success">Clone or download</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="repos"></div>
+    </div>
+</div>
+
+<footer class="container-fluid">
+    <div class="container border-top bd-default pt-2 mt-10">
+        <div class="row flex-align-center">
+            <div class="cell-md-5 text-center-md text-left">
+                <ul class="inline-list reduce-2">
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Security</a></li>
+                    <li><a href="">Status</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+            </div>
+            <div class="cell-md-2 text-center">
+                <div>
+                    <a href="" class="no-decor fg-lightGray"><span class="mif-github mif-2x"></span></a>
+                </div>
+            </div>
+            <div class="cell-md-5 text-center-md text-right">
+                <ul class="inline-list reduce-2">
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">API</a></li>
+                    <li><a href="">Training</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="ajax-loader" />
+
+<div class="dialog" data-role="dialog" id="gitInputDialog">
+    <div class="dialog-title">Enter Git Credentials</div>
+    <div class="dialog-content">
+        <div class="form-group">
+            <input id="txtusername" type="text" data-role="input" data-prepend="<span class='mif-envelop'>" placeholder="Enter your username..." data-validate="required email">
+        </div>
+        <div class="form-group">
+            <input id="txturl" type="text" data-role="input" data-prepend="<span class='mif-envelop'>" placeholder="Enter git url..." data-validate="required url">
+        </div>
+        <div class="form-group">
+            <input id="txttoken" type="text" data-role="input" data-prepend="<span class='mif-envelop'>" placeholder="Enter git token..." data-validate="required token">
+        </div>
+    </div>
+    <div class="dialog-actions">
+        <button class="button primary js-dialog-close" onclick="validateForm()">Fetch</button>
+    </div>
+</div>
+
+<script src="~/js/metro.min.js"></script>
+<script src="~/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        Metro.dialog.open('#gitInputDialog')
+    });
+
+    function validateForm() {
+        var data = { UserName: $("#txtusername").val(), GitUrl: $("#txturl").val(), Token: $("#txttoken").val() };
+        //$('#loading-image').show();
+        $.ajax({
+            beforeSend: function () {
+                $('.ajax-loader').css("visibility", "visible");
+            },
+            datatype: 'json',
+            type: 'post',
+            url: '/Home/GetRepoDetails',
+            data: { "input": JSON.stringify(data) },
+            error: function (response) {
+                Metro.dialog.create({
+                    title: "Error",
+                    content: "<div>The supplied input is not correct!!</div>",
+                    clsDialog: "bg-light",
+                    clsTitle: "fg-red",
+                    clsContent: "fg-black",
+                    clsDefaultAction: "alert"
+                });
+
+            },
+            complete: function () { $('.ajax-loader').css("visibility", "hidden"); },
+            success: function (result) { populateRepos(result) }
+        }).done(function () {
+            $(".login-form").animate({
+                opacity: 0
+            });
+        });
+
+    }
+
+    function populateRepos(data) {
+        data.forEach(element => {
+            var repo = '<div class="mt-4"><div class="p-4 bg-light border bd-default"><div class="row"><div class="cell-md-6 text-center text-left-md"><span class="text-bold reduce-1">' + element.Name + '</span><span class="reduce-1"></span></div><div class="cell-md-6 text-center text-right-md">Default Branch- ' + element.DefaultBranch + '</div></div></div><table class="table row-border table-border row-hover"><tbody>';
+            element.Commits.forEach(item => {
+                repo += '<tr><td><span class="mif-file-code"></span> <a href="">' + item.ComitDate + '</a></td>'
+                    + '<td><span>' + item.Message + '</span></td>'
+                    + '<td><span>' + item.Author + '</span></td></tr>';
+            });
+            repo += '</tbody></table></div>';
+
+            $("#repos").append(repo);
+        });
+    }
+
+</script>
+
+
+
+
+
+
